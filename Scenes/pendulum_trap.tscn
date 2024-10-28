@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3t2xg37p5pgw"]
+
+[ext_resource type="Script" path="res://Scenes/pendulum_trap.gd" id="1_k800l"]
+[ext_resource type="Texture2D" uid="uid://cfydxvqt3lkcn" path="res://Assets/sprites/Blade1Transparent.png" id="1_yjltu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wfg0a"]
+radius = 12.5
+height = 49.0
+
+[node name="Pendulum Trap" type="AnimatableBody2D"]
+script = ExtResource("1_k800l")
+metadata/_edit_horizontal_guides_ = [-23.0]
+metadata/_edit_vertical_guides_ = [0.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -22)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_yjltu")
+offset = Vector2(0, 110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_wfg0a")
